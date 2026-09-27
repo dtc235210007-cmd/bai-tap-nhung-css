@@ -3,74 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Định dạng văn bản với CSS</title>
+    <title>Đọc Truyện Ngắn: Tuyển Tập Truyện Dân Gian</title>
     <style>
+        /* Thiết lập nền và font chữ chung */
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f9;
-            padding: 30px;
-            color: #333333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fa;
+            color: #2c3e50;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 750px;
             margin: 0 auto;
             background-color: #ffffff;
-            padding: 25px 35px;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Bước 4: Định dạng ảnh bìa truyện */
+        .story-cover {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .story-cover img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
-        /* Định dạng tiêu đề chính */
-        .main-title {
-            text-align: center;            /* Căn giữa */
-            color: #1a73e8;                 /* Màu xanh */
-            font-size: 28px;               /* Cỡ chữ */
-            text-transform: uppercase;     /* In hoa */
-            letter-spacing: 1.5px;         /* Khoảng cách giữa các chữ cái */
-            margin-bottom: 20px;
+        h1.story-title {
+            text-align: center;
+            color: #d35400;
+            text-transform: uppercase;
+            font-size: 26px;
+            margin-top: 15px;
         }
 
-        /* Định dạng tiêu đề phụ */
-        .sub-title {
-            color: #2c3e50;
-            font-size: 20px;
-            font-style: italic;            /* Chữ nghiêng */
-            border-bottom: 2px solid #1a73e8;
-            padding-bottom: 6px;
+        /* Bước 1 & Bước 5: Khu vực mục lục truyện */
+        .table-of-contents {
+            background-color: #fdfaf6;
+            border-left: 4px solid #e67e22;
+            padding: 15px 25px;
+            margin: 25px 0 40px 0;
+            border-radius: 4px;
         }
 
-        /* Đoạn văn bản chuẩn với lùi đầu dòng */
-        .text-paragraph {
+        .table-of-contents h5 {
+            margin: 10px 0;
             font-size: 16px;
-            line-height: 1.7;              /* Khoảng cách giữa các dòng */
-            text-align: justify;           /* Căn đều hai bên */
-            text-indent: 30px;             /* Lùi đầu dòng */
-            color: #4a4a4a;
         }
 
-        /* Đoạn văn bản gạch chân/trang trí */
-        .highlight-text {
-            color: #d93025;
-            font-weight: bold;
-            text-decoration: underline;    /* Gạch chân */
+        /* Bước 3: Tạo liên kết neo cho mục lục */
+        .table-of-contents a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .table-of-contents a:hover {
+            color: #d35400;
+            text-decoration: underline;
+        }
+
+        /* Bước 2: Định dạng nội dung từng chương */
+        .chapter {
+            margin-bottom: 45px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #dcdde1;
+        }
+
+        .chapter h2 {
+            color: #e67e22;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .chapter p {
+            text-indent: 25px;
+            text-align: justify;
+            font-size: 16px;
+            margin: 12px 0;
+        }
+
+        /* Nút quay về mục lục */
+        .back-to-top {
+            display: inline-block;
+            font-size: 13px;
+            color: #7f8c8d;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+
+        .back-to-top:hover {
+            color: #2980b9;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 class="main-title">Luyện Tập Định Dạng Văn Bản CSS</h1>
+        <!-- BƯỚC 4: ẢNH BÌA TRUYỆN ĐẶT ĐẦU TRANG -->
+        <div class="story-cover">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80" alt="Bìa sách truyện">
+            <h1 class="story-title">Tuyển Tập Truyện Cổ Tích & Ngụ Ngôn</h1>
+        </div>
 
-        <h2 class="sub-title">1. Giới thiệu về Text Formatting</h2>
-        <p class="text-paragraph">
-            CSS cung cấp rất nhiều thuộc tính mạnh mẽ để tùy biến giao diện chữ viết trên trang web. Bằng cách kết hợp linh hoạt giữa kích thước phông chữ, màu sắc, khoảng cách dòng và căn lề, bạn có thể tạo nên những giao diện đọc trực quan, hiện đại và dễ tiếp thu cho người dùng.
-        </p>
+        <!-- BƯỚC 1 & 5: CÁC MỤC LỤC TRUYỆN DÙNG THẺ H5 -->
+        <div class="table-of-contents" id="top">
+            <h3 style="margin-top: 0; color: #333;">Mục lục truyện</h3>
+            <h5><a href="#chuong-1">Chương 1: Thầy bói xem voi</a></h5>
+            <h5><a href="#chuong-2">Chương 2: Đeo nhạc cho mèo</a></h5>
+            <h5><a href="#chuong-3">Chương 3: Rùa và Thỏ chạy thi</a></h5>
+        </div>
 
-        <h2 class="sub-title">2. Điểm nhấn và căn chỉnh</h2>
-        <p class="text-paragraph">
-            Để tạo sự nổi bật trong bài viết, chúng ta có thể áp dụng các thuộc tính làm nổi như <span class="highlight-text">chữ in đậm có gạch chân</span>, đồng thời sử dụng <code style="background-color: #eee; padding: 2px 5px;">text-indent</code> để lùi đầu dòng như văn bản trình bày truyền thống.
-        </p>
+        <!-- BƯỚC 2: NỘI DUNG TỪNG MỤC LỤC (GẮN ID ĐỂ LINK BƯỚC 3 NHẢY ĐẾN) -->
+        <div class="chapter" id="chuong-1">
+            <h2>Chương 1: Thầy bói xem voi</h2>
+            <p>
+                Nhân buổi ế hàng, năm ông thầy bói mù ngồi trò chuyện với nhau. Thầy nào cũng phàn nàn không biết hình thù con voi nó ra làm sao. Tình cờ nghe người ta bảo có voi đi qua, năm thầy chung nhau tiền biếu người quản tượng xin cho voi dừng lại để cùng xem.
+            </p>
+            <p>
+                Thầy sờ vòi bảo: "Tưởng con voi thế nào, hóa ra nó sun sun như con đỉa". Thầy sờ ngà cãi: "Không phải, nó chần chẫn như cái đòn cán". Thầy sờ tai khăng khăng: "Đâu có, nó bè bè như cái quạt thóc". Thầy sờ chân lại bảo: "Ai bảo, nó sừng sững như cái cột đình". Thầy sờ đuôi quát: "Các thầy sai hết, nó tua tủa như cái chổi sể cùn". Năm thầy không ai chịu ai, đâm ra xô xát to tiếng.
+            </p>
+            <a href="#top" class="back-to-top">↑ Về mục lục</a>
+        </div>
+
+        <div class="chapter" id="chuong-2">
+            <h2>Chương 2: Đeo nhạc cho mèo</h2>
+            <p>
+                Từ khi loài chuột sinh ra đến nay, chúng luôn phải khiếp sợ giống mèo. Một hôm, làng chuột mở đại hội bàn kế thoát khỏi móng vuốt mèo. Chuột Cống đứng lên hiến kế: "Chỉ cần buộc cái chuông vào cổ mèo, khi mèo đi đến chuông kêu lách cách, chúng ta tha hồ mà chạy". Cả làng chuột vỗ tay khen ngợi kế sách tuyệt diệu.
+            </p>
+            <p>
+                Đến lúc cử người đi đeo nhạc, chuột Cống từ chối vì bận việc làng, chuột Nhắt bảo mình còn bé, chuột Chù lại nói mình chậm chạp. Cuối cùng, không ai dám lại gần mèo để đeo chuông. Kế sách hay đến mấy mà không thực hiện được thì cũng bằng không.
+            </p>
+            <a href="#top" class="back-to-top">↑ Về mục lục</a>
+        </div>
+
+        <div class="chapter" id="chuong-3">
+            <h2>Chương 3: Rùa và Thỏ chạy thi</h2>
+            <p>
+                Trời mùa thu mát mẻ, Rùa đang cần mẫn tập chạy bên bờ suối. Thỏ thấy vậy liền buông lời chế giễu: "Chậm như mày mà cũng đòi tập chạy à!". Rùa bình thản đáp: "Anh đừng vội kiêu ngạo, ta thử chạy thi một vòng xem ai về đích trước".
+            </p>
+            <p>
+                Cuộc thi bắt đầu, Thỏ cậy mình chạy nhanh nên ung dung đuổi bướm hái hoa, ngủ thiếp đi dưới gốc cây. Trong khi đó, Rùa từng bước kiên trì tiến về phía trước không ngừng nghỉ. Khi Thỏ giật mình tỉnh dậy thì Rùa đã chạm vạch đích từ lâu.
+            </p>
+            <a href="#top" class="back-to-top">↑ Về mục lục</a>
+        </div>
     </div>
 
 </body>
