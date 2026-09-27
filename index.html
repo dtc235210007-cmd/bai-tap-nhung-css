@@ -3,159 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đọc Truyện Ngắn: Tuyển Tập Truyện Dân Gian</title>
-    <style>
-        /* Thiết lập nền và font chữ chung */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f9fa;
-            color: #2c3e50;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 750px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 30px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Bước 4: Định dạng ảnh bìa truyện */
-        .story-cover {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .story-cover img {
-            width: 100%;
-            max-height: 350px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        h1.story-title {
-            text-align: center;
-            color: #d35400;
-            text-transform: uppercase;
-            font-size: 26px;
-            margin-top: 15px;
-        }
-
-        /* Bước 1 & Bước 5: Khu vực mục lục truyện */
-        .table-of-contents {
-            background-color: #fdfaf6;
-            border-left: 4px solid #e67e22;
-            padding: 15px 25px;
-            margin: 25px 0 40px 0;
-            border-radius: 4px;
-        }
-
-        .table-of-contents h5 {
-            margin: 10px 0;
-            font-size: 16px;
-        }
-
-        /* Bước 3: Tạo liên kết neo cho mục lục */
-        .table-of-contents a {
-            color: #2980b9;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .table-of-contents a:hover {
-            color: #d35400;
-            text-decoration: underline;
-        }
-
-        /* Bước 2: Định dạng nội dung từng chương */
-        .chapter {
-            margin-bottom: 45px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #dcdde1;
-        }
-
-        .chapter h2 {
-            color: #e67e22;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .chapter p {
-            text-indent: 25px;
-            text-align: justify;
-            font-size: 16px;
-            margin: 12px 0;
-        }
-
-        /* Nút quay về mục lục */
-        .back-to-top {
-            display: inline-block;
-            font-size: 13px;
-            color: #7f8c8d;
-            text-decoration: none;
-            margin-top: 8px;
-        }
-
-        .back-to-top:hover {
-            color: #2980b9;
-        }
-    </style>
+    <title>Bố cục trang web với HTML5 và CSS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- BƯỚC 4: ẢNH BÌA TRUYỆN ĐẶT ĐẦU TRANG -->
-        <div class="story-cover">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80" alt="Bìa sách truyện">
-            <h1 class="story-title">Tuyển Tập Truyện Cổ Tích & Ngụ Ngôn</h1>
-        </div>
+    <!-- PHẦN ĐẦU TRANG -->
+    <header>
+        <h1>Website Tin Tức & Công Nghệ</h1>
+        <p>Thực hành thiết kế layout chuẩn HTML5 Semantic</p>
+    </header>
 
-        <!-- BƯỚC 1 & 5: CÁC MỤC LỤC TRUYỆN DÙNG THẺ H5 -->
-        <div class="table-of-contents" id="top">
-            <h3 style="margin-top: 0; color: #333;">Mục lục truyện</h3>
-            <h5><a href="#chuong-1">Chương 1: Thầy bói xem voi</a></h5>
-            <h5><a href="#chuong-2">Chương 2: Đeo nhạc cho mèo</a></h5>
-            <h5><a href="#chuong-3">Chương 3: Rùa và Thỏ chạy thi</a></h5>
-        </div>
+    <!-- THANH ĐIỀU HƯỚNG MENU -->
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
 
-        <!-- BƯỚC 2: NỘI DUNG TỪNG MỤC LỤC (GẮN ID ĐỂ LINK BƯỚC 3 NHẢY ĐẾN) -->
-        <div class="chapter" id="chuong-1">
-            <h2>Chương 1: Thầy bói xem voi</h2>
-            <p>
-                Nhân buổi ế hàng, năm ông thầy bói mù ngồi trò chuyện với nhau. Thầy nào cũng phàn nàn không biết hình thù con voi nó ra làm sao. Tình cờ nghe người ta bảo có voi đi qua, năm thầy chung nhau tiền biếu người quản tượng xin cho voi dừng lại để cùng xem.
-            </p>
-            <p>
-                Thầy sờ vòi bảo: "Tưởng con voi thế nào, hóa ra nó sun sun như con đỉa". Thầy sờ ngà cãi: "Không phải, nó chần chẫn như cái đòn cán". Thầy sờ tai khăng khăng: "Đâu có, nó bè bè như cái quạt thóc". Thầy sờ chân lại bảo: "Ai bảo, nó sừng sững như cái cột đình". Thầy sờ đuôi quát: "Các thầy sai hết, nó tua tủa như cái chổi sể cùn". Năm thầy không ai chịu ai, đâm ra xô xát to tiếng.
-            </p>
-            <a href="#top" class="back-to-top">↑ Về mục lục</a>
-        </div>
+    <!-- KHU VỰC THÂN TRANG (CONTAINER CHÍNH) -->
+    <div class="main-container">
+        
+        <!-- NỘI DUNG CHÍNH (SECTION & ARTICLE) -->
+        <section class="content">
+            <article>
+                <h2>HTML5 Semantic Tags là gì?</h2>
+                <p class="post-meta">Đăng ngày 27/09/2026 bởi Quản trị viên</p>
+                <p>
+                    HTML5 mang đến những thẻ có ý nghĩa rõ ràng (semantic elements) giúp định hình cấu trúc trang web một cách mạch lạc. Việc sử dụng các thẻ như <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code> thay vì lạm dụng thẻ <code>&lt;div&gt;</code> giúp công cụ tìm kiếm (SEO) và trình đọc màn hình dễ dàng phân tích nội dung hơn.
+                </p>
+            </article>
 
-        <div class="chapter" id="chuong-2">
-            <h2>Chương 2: Đeo nhạc cho mèo</h2>
-            <p>
-                Từ khi loài chuột sinh ra đến nay, chúng luôn phải khiếp sợ giống mèo. Một hôm, làng chuột mở đại hội bàn kế thoát khỏi móng vuốt mèo. Chuột Cống đứng lên hiến kế: "Chỉ cần buộc cái chuông vào cổ mèo, khi mèo đi đến chuông kêu lách cách, chúng ta tha hồ mà chạy". Cả làng chuột vỗ tay khen ngợi kế sách tuyệt diệu.
-            </p>
-            <p>
-                Đến lúc cử người đi đeo nhạc, chuột Cống từ chối vì bận việc làng, chuột Nhắt bảo mình còn bé, chuột Chù lại nói mình chậm chạp. Cuối cùng, không ai dám lại gần mèo để đeo chuông. Kế sách hay đến mấy mà không thực hiện được thì cũng bằng không.
-            </p>
-            <a href="#top" class="back-to-top">↑ Về mục lục</a>
-        </div>
+            <article>
+                <h2>Tầm quan trọng của CSS trong thiết kế Layout</h2>
+                <p class="post-meta">Đăng ngày 26/09/2026 bởi Quản trị viên</p>
+                <p>
+                    CSS kiểm soát hoàn toàn cách các khối thành phần hiển thị trên màn hình. Bằng việc phân chia tỷ lệ chiều rộng, thiết lập khoảng đệm (padding) và căn lề linh hoạt giữa cột nội dung chính và thanh bên (aside), giao diện trang web sẽ trở nên cân đối và thân thiện với người dùng.
+                </p>
+            </article>
+        </section>
 
-        <div class="chapter" id="chuong-3">
-            <h2>Chương 3: Rùa và Thỏ chạy thi</h2>
-            <p>
-                Trời mùa thu mát mẻ, Rùa đang cần mẫn tập chạy bên bờ suối. Thỏ thấy vậy liền buông lời chế giễu: "Chậm như mày mà cũng đòi tập chạy à!". Rùa bình thản đáp: "Anh đừng vội kiêu ngạo, ta thử chạy thi một vòng xem ai về đích trước".
-            </p>
-            <p>
-                Cuộc thi bắt đầu, Thỏ cậy mình chạy nhanh nên ung dung đuổi bướm hái hoa, ngủ thiếp đi dưới gốc cây. Trong khi đó, Rùa từng bước kiên trì tiến về phía trước không ngừng nghỉ. Khi Thỏ giật mình tỉnh dậy thì Rùa đã chạm vạch đích từ lâu.
-            </p>
-            <a href="#top" class="back-to-top">↑ Về mục lục</a>
-        </div>
+        <!-- THANH BÊN (SIDEBAR - ASIDE) -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Chuyên mục</h3>
+                <ul>
+                    <li><a href="#">Lập trình Web</a></li>
+                    <li><a href="#">Cơ sở dữ liệu</a></li>
+                    <li><a href="#">Hệ thống mạng</a></li>
+                    <li><a href="#">Mẹo công nghệ</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Về chúng tôi</h3>
+                <p>Trang web học tập và chia sẻ kiến thức lập trình cơ bản đến nâng cao.</p>
+            </div>
+        </aside>
+
     </div>
+
+    <!-- PHẦN CHÂN TRANG -->
+    <footer>
+        <p>&copy; 2026 Thực hành Web HTML5 & CSS. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
