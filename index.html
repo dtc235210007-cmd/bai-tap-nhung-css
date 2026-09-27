@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định dạng văn bản với CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            padding: 30px;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px 35px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Định dạng tiêu đề chính */
+        .main-title {
+            text-align: center;            /* Căn giữa */
+            color: #1a73e8;                 /* Màu xanh */
+            font-size: 28px;               /* Cỡ chữ */
+            text-transform: uppercase;     /* In hoa */
+            letter-spacing: 1.5px;         /* Khoảng cách giữa các chữ cái */
+            margin-bottom: 20px;
+        }
+
+        /* Định dạng tiêu đề phụ */
+        .sub-title {
+            color: #2c3e50;
+            font-size: 20px;
+            font-style: italic;            /* Chữ nghiêng */
+            border-bottom: 2px solid #1a73e8;
+            padding-bottom: 6px;
+        }
+
+        /* Đoạn văn bản chuẩn với lùi đầu dòng */
+        .text-paragraph {
+            font-size: 16px;
+            line-height: 1.7;              /* Khoảng cách giữa các dòng */
+            text-align: justify;           /* Căn đều hai bên */
+            text-indent: 30px;             /* Lùi đầu dòng */
+            color: #4a4a4a;
+        }
+
+        /* Đoạn văn bản gạch chân/trang trí */
+        .highlight-text {
+            color: #d93025;
+            font-weight: bold;
+            text-decoration: underline;    /* Gạch chân */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="main-title">Luyện Tập Định Dạng Văn Bản CSS</h1>
+
+        <h2 class="sub-title">1. Giới thiệu về Text Formatting</h2>
+        <p class="text-paragraph">
+            CSS cung cấp rất nhiều thuộc tính mạnh mẽ để tùy biến giao diện chữ viết trên trang web. Bằng cách kết hợp linh hoạt giữa kích thước phông chữ, màu sắc, khoảng cách dòng và căn lề, bạn có thể tạo nên những giao diện đọc trực quan, hiện đại và dễ tiếp thu cho người dùng.
+        </p>
+
+        <h2 class="sub-title">2. Điểm nhấn và căn chỉnh</h2>
+        <p class="text-paragraph">
+            Để tạo sự nổi bật trong bài viết, chúng ta có thể áp dụng các thuộc tính làm nổi như <span class="highlight-text">chữ in đậm có gạch chân</span>, đồng thời sử dụng <code style="background-color: #eee; padding: 2px 5px;">text-indent</code> để lùi đầu dòng như văn bản trình bày truyền thống.
+        </p>
+    </div>
+
+</body>
+</html>
